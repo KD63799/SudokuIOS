@@ -9,65 +9,37 @@ import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-        SplashScreen()
-    }
-}
-
-private extension SplashView {
-    func SplashScreen() -> some View {
-        VStack(spacing: 0) {
-            ZStack {
-                Image(.background)
+        VStack {
+            VStack(spacing: 38) {
+                Image(.sudokuLogo)
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
+                    .frame(width: 280, height: 280)
                 
                 VStack(spacing: 0) {
-                    Spacer()
-                        .frame(height: 140)
+                    Text("Sudoku")
+                        .font(.summaryNotes(size: 90))
+                        .fontWeight(.black)
+                        .foregroundStyle(.black)
                     
-                    Image(.sudokuLogo)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 280, height: 280)
-                    
-                    Spacer()
-                        .frame(height: 40)
-                    
-                    VStack(spacing: 0) {
-                        Text("Sudoku")
-                            .font(.summaryNotes(size: 90))
-                            .fontWeight(.black)
-                            .foregroundStyle(.black)
-                        
-                        Text("Hatchling")
-                            .font(.summaryNotes(size: 40))
-                            .fontWeight(.bold)
-                            .foregroundStyle(.black)
-                    }
-                    
-                    Spacer()
-                        .frame(minHeight: 100)
+                    Text("Hatchling")
+                        .font(.summaryNotes(size: 40))
+                        .fontWeight(.bold)
+                        .foregroundStyle(.black)
                 }
             }
-            
-            VStack {
-                Spacer()
-                    .frame(height: 40)
-                
-                HStack(spacing: 20) {
-                    Image(.loaderEggs)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 140, height: 50)
-                }
-                
-                Spacer()
-                    .frame(height: 60)
-            }
-            .frame(maxWidth: .infinity)
-            .background(Color.white)
+            Spacer()
+            Image(.loaderEggs)
         }
-        .ignoresSafeArea()
+        .frame(maxWidth: .infinity)
+        .padding(.top, 60)
+        .padding(.bottom, 40)
+        .background(alignment: .top) {
+            Image(.background)
+                .resizable()
+                .scaledToFit()
+                .ignoresSafeArea()
+        }
     }
 }
 

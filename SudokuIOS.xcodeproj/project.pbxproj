@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DE46E6162EAB6FFA0037CB01 /* NetworkClient in Frameworks */ = {isa = PBXBuildFile; productRef = DE46E6152EAB6FFA0037CB01 /* NetworkClient */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DED005752EA6AA06001F4F74 /* SudokuIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -15,12 +19,18 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				"Packages/devidteam-networkclient-lib-ios-baacfa420e40",
 			);
 			target = DED005742EA6AA06001F4F74 /* SudokuIOS */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		DE46E61A2EAB80E50037CB01 /* Network */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Network;
+			sourceTree = "<group>";
+		};
 		DED005772EA6AA06001F4F74 /* SudokuIOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -36,16 +46,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE46E6162EAB6FFA0037CB01 /* NetworkClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE46E6142EAB6FF30037CB01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE46E61A2EAB80E50037CB01 /* Network */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DED0056C2EA6AA06001F4F74 = {
 			isa = PBXGroup;
 			children = (
 				DED005772EA6AA06001F4F74 /* SudokuIOS */,
+				DE46E6142EAB6FF30037CB01 /* Frameworks */,
 				DED005762EA6AA06001F4F74 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,10 +94,12 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				DE46E61A2EAB80E50037CB01 /* Network */,
 				DED005772EA6AA06001F4F74 /* SudokuIOS */,
 			);
 			name = SudokuIOS;
 			packageProductDependencies = (
+				DE46E6152EAB6FFA0037CB01 /* NetworkClient */,
 			);
 			productName = SudokuIOS;
 			productReference = DED005752EA6AA06001F4F74 /* SudokuIOS.app */;
@@ -347,6 +369,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE46E6152EAB6FFA0037CB01 /* NetworkClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DED0056D2EA6AA06001F4F74 /* Project object */;
 }

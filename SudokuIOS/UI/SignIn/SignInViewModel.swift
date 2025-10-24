@@ -17,13 +17,10 @@ class SignInViewModel {
         
         let response = await repository.signIn(email: email, password: password)
         
-        print("🔵 Status code: \(response.statusCode ?? -1)")
-        print("🔵 IsSuccess: \(response.isSuccess)")
-        
         isLoading = false
         
         if response.isSuccess, let authData = response.object {
-            print("✅ Connecté : \(authData.user.email)")
+            print("Connecté : \(authData.user.email)")
             print("\(authData.session.accessToken)")
             TokenManager.shared.saveTokens(
                 accessToken: authData.session.accessToken,

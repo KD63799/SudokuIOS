@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "GoldenButton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "GoldenButton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

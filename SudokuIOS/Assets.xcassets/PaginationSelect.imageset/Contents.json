@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "PaginationSelect@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "PaginationSelect@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

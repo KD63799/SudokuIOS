@@ -53,7 +53,6 @@ struct SignInView: View {
                 .disableAutocorrection(true)
                 
                 NavigationLink("No Account ? create one here.") {
-                    SignUpView(appState: $appState)
                 }
                 .font(.summaryNotes(size: 20))
                 .underline()

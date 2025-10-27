@@ -20,7 +20,7 @@ struct ContentView: View {
                     appState = .unauthenticated
                 }
         case .authenticated:
-            EnterNameView()
+            SignInView(appState: $appState)
         case .unauthenticated:
             SignInView(appState: $appState)
         }

@@ -1,3 +1,10 @@
+//
+//  Token.swift
+//  SudokuIOS
+//
+//  Created by Amir on 24/10/2025.
+//
+
 import Observation
 import NetworkClient
 
@@ -9,7 +16,7 @@ class SignInViewModel {
     var isLoading: Bool = false
     var errorMessage: String? = nil
     
-    private let repository = SudokuRepository()
+    private let repository = UserRepository()
     
     func signIn(onSuccess: @escaping () -> Void) async {
         isLoading = true

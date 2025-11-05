@@ -5,17 +5,12 @@
 //  Created by Amir on 28/10/2025.
 //
 
+
 import Foundation
 import NetworkClient
 
 class UserRepository {
-    static let shared = UserRepository()
-    let instance = UserRepository()
-    private let networkManager: NetworkClientManager
-    
-    init(networkManager: NetworkClientManager = NetworkClientManager(baseUrl: Config.baseUrl)) {
-        self.networkManager = networkManager
-    }
+    private let networkManager = NetworkClientManager.shared  // ✅ Singleton
     
     func signIn(email: String, password: String) async -> NetworkClientResponse<AuthResponse> {
         let endpoint = Endpoint.UserEndpoints.signIn

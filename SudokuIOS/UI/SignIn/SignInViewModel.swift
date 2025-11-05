@@ -22,9 +22,12 @@ class SignInViewModel {
         let response = await repository.signIn(email: email, password: password)
         
         if response.isSuccess, let authData = response.object {
+            print("Connecté : \(authData.user.email)")
+            print("\(authData.session.accessToken)")
             TokenManager.shared.saveTokens(
                 accessToken: authData.session.accessToken,
                 refreshToken: authData.session.refreshToken
+                
             )
             return .authenticated
         } else {

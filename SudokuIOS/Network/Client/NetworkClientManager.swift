@@ -9,14 +9,14 @@ import Foundation
 import NetworkClient
 
 class NetworkClientManager {
-    private(set) var client: NetworkClient
-    private let baseUrl: String
+    static let shared = NetworkClientManager()
     
-    init(baseUrl: String) {
-        self.baseUrl = baseUrl
+    private(set) var client: NetworkClient
+    
+    private init() {
         do {
             self.client = try NetworkClient(
-                baseUrl: baseUrl,
+                baseUrl: Config.baseUrl,
                 config: NetworkClientConfig(
                     defaultRequestTimeout: 30.0,
                     sessionHeaders: [
@@ -28,24 +28,20 @@ class NetworkClientManager {
                 )
             )
         } catch {
-            fatalError("Impossible d'initialiser NetworkClient")
+            fatalError("Impossible d'initialiser NetworkClient: \(error)")
         }
     }
     
     func dataTask<T: Decodable>(
-        customSession: URLSession? = nil,
         url: URL,
         httpMethod: HttpMethod,
         body: Data? = nil,
-        authenticationScheme: String = "Bearer ",
         accessToken: String? = nil
     ) async -> NetworkClientResponse<T> {
         return await client.dataTask(
-            customSession: customSession,
             url: url,
             httpMethod: httpMethod,
             body: body,
-            authenticationScheme: authenticationScheme,
             accessToken: accessToken
         )
     }

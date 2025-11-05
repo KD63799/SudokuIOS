@@ -16,7 +16,7 @@ struct ContentView: View {
         case .splash:
             SplashView()
                 .task {
-                    try? await Task.sleep(for: .seconds(2))
+                    try? await Task.sleep(for: .seconds(3))
                     appState = .unauthenticated
                 }
         case .authenticated:

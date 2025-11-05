@@ -9,6 +9,8 @@ import Foundation
 import NetworkClient
 
 class UserRepository {
+    static let shared = UserRepository()
+    let instance = UserRepository()
     private let networkManager: NetworkClientManager
     
     init(networkManager: NetworkClientManager = NetworkClientManager(baseUrl: Config.baseUrl)) {

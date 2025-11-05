@@ -26,11 +26,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DE46E61A2EAB80E50037CB01 /* Network */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Network;
-			sourceTree = "<group>";
-		};
 		DED005772EA6AA06001F4F74 /* SudokuIOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -56,7 +51,6 @@
 		DE46E6142EAB6FF30037CB01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE46E61A2EAB80E50037CB01 /* Network */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,7 +88,6 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DE46E61A2EAB80E50037CB01 /* Network */,
 				DED005772EA6AA06001F4F74 /* SudokuIOS */,
 			);
 			name = SudokuIOS;

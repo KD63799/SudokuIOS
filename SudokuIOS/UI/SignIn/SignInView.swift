@@ -9,10 +9,13 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @Bindable private var vm = SignInViewModel()
+    @State private var vm = SignInViewModel()
     @Binding var appState : AppState
     
     var body: some View {
+        @Bindable var vm = vm
+
+        
         NavigationStack {
             VStack(alignment: .leading, spacing: 100) {
                 
@@ -49,9 +52,7 @@ struct SignInView: View {
                 
                 Button(action: {
                     Task {
-                        await vm.signIn {
-                            appState = .authenticated
-                        }
+                        appState = await vm.signIn()
                     }
                 }) {
                     Text("Sign In")

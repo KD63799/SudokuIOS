@@ -26,7 +26,7 @@ struct CustomTextField: View {
                     "",
                     text: $text,
                     prompt: Text(placeholder)
-                        .foregroundColor(.gray.opacity(0.8))
+                        .foregroundStyle(.gray.opacity(0.8))
                         .font(.summaryNotes(size: 20))
                 )
                 .padding(16)
@@ -38,7 +38,7 @@ struct CustomTextField: View {
                     "",
                     text: $text,
                     prompt: Text(placeholder)
-                        .foregroundColor(.gray.opacity(0.8))
+                        .foregroundStyle(.gray.opacity(0.8))
                         .font(.summaryNotes(size: 20))
                 )
                 .padding(16)

@@ -5,7 +5,7 @@
 //  Created by Amir on 31/10/2025.
 //
 
-struct SignUpBody: Codable {
+struct SignUpBody: Encodable {
     let email: String
     let password: String
     let pseudo: String

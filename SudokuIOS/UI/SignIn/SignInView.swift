@@ -13,8 +13,6 @@ struct SignInView: View {
     @Binding var appState : AppState
     
     var body: some View {
-        @Bindable var vm = vm
-
         NavigationStack {
             VStack(alignment: .leading, spacing: 100) {
                 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Session: Codable {
+struct Session: Decodable {
     let accessToken: String
     let refreshToken: String
     let expiresAt: Int

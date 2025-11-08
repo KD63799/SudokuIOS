@@ -14,8 +14,8 @@ class SignInViewModel {
     var password: String = ""
     var errorMessage: String? = nil
     
-    private let repository = UserRepository()
-    
+    private let repository = UserRepository.shared
+
     func signIn() async -> AppState {
         errorMessage = nil
         

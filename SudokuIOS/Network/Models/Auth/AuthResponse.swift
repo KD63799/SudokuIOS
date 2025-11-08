@@ -5,7 +5,7 @@
 //  Created by Amir on 31/10/2025.
 //
 
-struct AuthResponse: Codable {
+struct AuthResponse: Decodable {
     let user: User
     let session: Session
 }
